@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!--ARKUSZ CSS --> 
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+     <!--LOGO STRONY --> 
+    <link rel="shortcut icon" href="img/logo.png">
+     <!-- TYTUL STRONY --> 
+    <title>Konrad Glinka - Opel Vectra</title>
+</head>
+<body>
+   <!--MENU STRONY W PRZYPADKU STANDARDOWYCH KOMPUTERÓW PRZYKLEJONE OD GÓRY Z KOTWICAMI I ROZPISANYMI ELEMENTAMI 
+    W PRZYPADKU WERSJI MOBILNEJ HAMBURGER I MENU MOZNA ROZWINAC LUB ZWINAC ODPOWIADA ZA TO ACTIVE W SEKCJI MEDIAQUERY CSS --> 
+<nav>
+     <div class="toggle">
+      <i class="fa fa-bars menu" aria-hidden="true"></i>
+  </div>
+  <ul>
+     <!--ELEMENTY MENU Z KOTWICAMI--> 
+  <li><a href="#slajder">SLAJDER</a></li>
+  <li><a href="#intro">WSTĘP</a></li>
+  <li><a href="#vectraa">VECTRA A</a></li>
+  <li><a href="#vectrab">VECTRA B</a></li>
+  <li><a href="#vectrac">VECTRA C</a></li>
+</ul>
+</nav>
+ <!--SKRYPT DLA URZADZEŃ MOBILNYCH --> 
+<script
+  src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.menu').click(function(){
+      $('ul').toggleClass('active');
+    })
+  })
+  </script>
+   <!--SLAJDER OBSLUGIWANY PRZEZ SKRYPT KTORY DOSTAJE OBRAZKI I ZMIENIA JE  --> 
+  <a id="slajder">
+<div class="slajder">
+    <img name="slide"  />
+</div>
+<script type="text/javascript">
+var i = 0; 	//WARTOSC STARTOWA - PIERWSZY OBRAZEK		
+var images = [];	//TABLICA PRZECHOWUJCA WSZYSTKIE OBRAZKI
+var time = 3000;	//CO ILE ZMIENIA SIE SLAJD
+//DODAJEMY OBRAZKI
+images[0] = "img/VC.jpg";
+images[1] = "img/VB.jpg";
+images[2] = "img/VA.jpg";
+function changeImg(){
+document.slide.src = images[i];
+if(i < images.length - 1){
+i++; 
+} else { 
+i = 0;
+}
+setTimeout("changeImg()", time); //FUNKCJE WYWOLUJEMY CO PODANY CZAS
+}
+window.onload=changeImg; //WYWOLANIE FUNKCJI OD RAZU PO ZALADOWANIU
+</script>
+</a>
+ <!--INTRO STRONY ZWYKLY OPIS W KONTENERZE KAZDY OPIS JEST POPRZEDZONY NAGLOWKIEM O ODPOWIEDNIEJ TRESCI ODPOWIEDNIO h1, h2...--> 
+<a id="intro">
+<h1>
+  WSTĘP
+</h1>
+<div class="intro">
+  <p> Opel Vectra to samochód osobowy należący do klasy średniej (segment D), produkowany w latach 1988-2008. Model ten zastępił w ofercie Opla model o nazwie Ascona. Wyprodukowany w liczbie blisko 6,5 miliona egzemplarzy. Poza granicami Europy oferowany był również pod szyldami Vauxhall, Holden oraz Chevrlet. W latach 1990-1992 oraz 1996-1998 model ten był najlepiej sprzedającym się autem w swojej klasie w europie. Na tej stronie poznasz wszystkie trzy generacje Opla Vectry oraz ich liftingi.</p> 
+</div>
+</a>
+<a id="vectraa">
+<h2>
+VECTRA A
+
+  </h2>
+   <!--OPISY GENERACJI SA W FORMIE OPIS PO LEWO ZAS PO PRAWO OBRAZEK (GRID CSS) JEDNAK W WERSJI MOBILEJ
+     OBRAZEK ZNAJDUJE SIE NAD TEKSTEM BY WSZYSTKO POZOSTALO CZYTELENE ODPOWIADA ZA TO mobileimage--> 
+  <div class="mobileimage"><img src="img/VAMINI.jpg"></div>
+<div class="grid-container">
+   <!--DESCRIBE TO OPIS IMAGE TO OBRAZEK(W PRZYPADKU MOBILNYCH IMAGE JEST ZASTEPOWANE MOBILE IMAGE 
+    A GRID CONTAINER MA TYLKO 1 KOLUMNE ZAWIERAJACA SAM DESCRIBE) --> 
+    <div class="describe">
+      <p>Vectra I generacji została zaprezentowana w 1988 roku,a jej projektantem był Wayne Cherry. Pod szyldem Vauxhall pierwsza generacja nosiła nazwe Cavalier. Auto przeszło face-lifting w 1992 roku wtedy do wyposażenia standardowego samochodu dodano ABS oraz wspomaganie kierownicy. Face lifting zmienił w Vectrze miedzy innymi: atrape chłodnicy, tylnie lampy oraz zderzaki. Istniała również wersja z napędem 4x4 z której zrezygnowano w późniejszych generacjach. Dostępna była w wersji sedan oraz liftback od 1989 roku. Początkowo Vectra A miała być zaprojektowana przez firme Italdesign jednak ten koncept nie spodobał się władzą Opla. Wymieniony przed chwilą koncept zadebiutował kilka lat później jako Daewoo Espero. Z wyposażenia Vectry dostępne były miedzy innymi: klimatyzacja, komputer pokładowy, elektrycznie sterowane szyby, elektrycznie sterowane i podgrzewane lusterka, szyberdach.</p>
+    </div>
+    <div class="image"><img src="img/VAMINI.jpg"></div>
+  </div>
+  <h3>
+  </a>
+  <a id="vectrab">
+      VECTRA B
+        </h3>
+        <div class="mobileimage"><img src="img/VBMINI.jpg"></div>
+        <div class="grid-container">
+            <div class="describe"> 
+<p>Vectra II generacji powstała w 1995 roku i była produkowana do 2002 roku. Model ten otrzymał lifting w 1999 roku. Ten model w Angli pod marka Vauxhall był sprzedawany już pod nazwą Vectra, a nie jak poprzednik pod nazwą Cavalier. Z wersji nadwozia dostępne były: sedan hatchback oraz kombi. Dostępna była ze skrzynia automatyczną 4 biegową lub manualna 5 biegową. Firmy tuningujace Vectre B to miedzy innymi Irmscher oraz Zender. Topowe egzemplarze to i500 oraz i30. W liftingu zmieniono m.in. atrapę chłodnicy, która otrzymała chromowaną obwolutę, zastosowano nowe zderzaki, listwy przednie oraz nowe lampy przednie i tylne, dodano plastikowe nakładki na progi. Vectra B Super Touring brała udział w wyścigach: British Touring Car Championship, Azja-Pacyfik Touring Car Championship, niemieckim Super Tourenwagen Cup, Australian Super Touring Championship i szwedzkim Touring Car Championship.</p>
+              </div>
+                <div class="image"><img src="img/VBMINI.jpg">
+                </div>
+        </div>
+        <h4>
+        </a>
+        <a id="vectrac">
+            VECTRA C
+              </h4>
+              <div class="mobileimage"><img src="img/VCMINI.jpg"></div>
+              <div class="grid-container">
+                  <div class="describe"> 
+<p>Vectra III i ostatiej genracji została zaprezentowana w 2002 roku i była produkowana do 2008 roku.Dostepne były nadwozia: sedan, kombi oraz liftback.Jej luksusowa wesja hatchback nosiła nazwe Signium. Auto przeszło face-lifting w 2005 roku zmieniono przednie reflektory oraz zderzak. Dostępna była ze skrzynia 5 lub 6 biegową manualną lub 5 i 6 biegową automatyczną. W testach Euro NCAP uzyskała 4 gwiazdki. Auto dzieli płyte podłogową miedzy innmi z Fiatem Cromą czy Saabem 93. Z wersji wyposażeniowych możemy wyróżnic: Elegance, Cosmo, OPC, Sport. Jej następczynią jest Opel Insignia. </p>
+                  </div>
+                      <div class="image"><img src="img/VCMINI.jpg">
+                      </div>
+              </div>
+            </a>
+</body>
+</html>
